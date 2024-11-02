@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Registration Form</title>
+    <style type="text/css" media="all">
+        body {
+      background-color: white;
+      margin: 0;
+  }
+
+  .container {
+      max-width: 400px;
+      margin: 50px auto;
+      background: white;
+      padding: 20px;
+      border-radius: 5px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  }
+
+  h1 {
+      text-align: center;
+      margin-bottom: 20px;
+  }
+
+  .form-group {
+      margin-bottom: 15px;
+  }
+
+  label {
+      display: block;
+      margin-bottom: 5px;
+  }
+
+  input[type="text"],
+  input[type="email"] {
+      width: 95%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+  }
+
+  button {
+      width: 100%;
+      padding: 10px;
+      background-color: #5cb85c;
+      color: white;
+      border: none;
+      border-radius: 13px;
+      cursor: pointer;
+  }
+
+  button:hover {
+      background-color: #4cae4c;
+  }
+
+  .navbar{
+    background-color: #212529;
+    height: 60px;
+    color: rgb(255 255 255 / 75%);
+    margin: auto;
+    display: flex;
+    justify-content: start;
+  }
+  .System{
+    font-family:sans-serif;
+    margin: 0;
+    font-size: 20px;
+    padding-left: 22px;
+    padding-top:18px;
+    color:#fff;
+  }
+
+  .system2{
+   font-family:sans-serif;
+    margin: 0;
+    font-size: 16px;
+    padding-top:21px;
+    padding-left: 34px;
+    }
+
+    a{
+        text-decoration: none;
+        color: #d9d4d4;
+    }
+
+    </style>
+</head>
+<body>
+
+<nav class="navbar">
+
+    <p class="System">Student Management System</p>
+
+    <a class="system2" th:href="@{/home}">Student Management System</a>
+</nav>
+
+
+
+<div class="container">
+    <h1>Student Registration</h1>
+    <form th:action="@{/students}" th:object="${student}" method="post">
+        <div class="form-group">
+            <label for="first-name">First Name:</label>
+            <input type="text" id="first-name" name="first-name" th:field="*{firstName}" required>
+        </div>
+
+        <div class="form-group">
+            <label for="last-name">Last Name:</label>
+            <input type="text" id="last-name" name="last-name" th:field="*{lastName}" required>
+        </div>
+
+        <div class="form-group">
+            <label for="email">Email Address:</label>
+            <input type="email" id="email" name="email" th:field="*{email}" required>
+        </div>
+
+        <button type="submit">Register</button>
+
+    </form>
+</div>
+</body>
+</html>

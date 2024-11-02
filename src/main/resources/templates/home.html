@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Management System</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+        }
+
+        header {
+            background: url('') no-repeat center center/cover;
+        }
+
+        section {
+            padding: 60px 0;
+        }
+
+        footer {
+            background-color: #343a40;
+        }
+    </style>
+</head>
+
+<body>
+
+<!-- Navigation Bar -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container">
+        <a class="navbar-brand" href="#">Student Management</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="#features">Features</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#about">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#contact">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- Hero Section -->
+<header class="bg-primary text-white text-center py-5">
+    <div class="container">
+        <h1 class="display-4">Manage Your Students Efficiently</h1>
+        <p class="lead">A comprehensive system for students, teachers, and administrators.</p>
+        <a th:href="@{/students}" class="btn btn-light btn-lg">Get Started</a>
+    </div>
+</header>
+
+<!-- Features Section -->
+<section id="features" class="py-5">
+    <div class="container">
+        <h2 class="text-center mb-4">Key Features</h2>
+        <div class="row">
+            <div class="col-md-4 text-center">
+                <img src="images/Student-Management-System_p1.webp" alt="Feature 1" class="img-fluid mb-3">
+                <h4>Student Profiles</h4>
+                <p>Manage student details and academic records with ease.</p>
+            </div>
+            <div class="col-md-4 text-center">
+                <img src="images/Student-Management-System-Guide-min.png" alt="Feature 2" class="img-fluid mb-3">
+                <h4>Course Management</h4>
+                <p>Efficiently handle course registrations and schedules.</p>
+            </div>
+            <div class="col-md-4 text-center">
+                <img src="images/performance.png" alt="Feature 3" class="img-fluid mb-3">
+                <h4>Performance Tracking</h4>
+                <p>Analyze student performance and generate reports easily.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- About Section -->
+<section id="about" class="bg-light py-5">
+    <div class="container text-center">
+        <h2>About Us</h2>
+        <p>We are dedicated to simplifying the management of educational institutions with our user-friendly
+            software.</p>
+        <a href="#contact" class="btn btn-primary">Contact Us</a>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="bg-dark text-white py-4">
+    <div class="container text-center">
+        <p>&copy; 2024 Student Management System. All rights reserved.</p>
+        <p>Follow us on:
+            <a href="#" class="text-white">Facebook</a> |
+            <a href="#" class="text-white">Twitter</a> |
+            <a href="#" class="text-white">Instagram</a>
+        </p>
+    </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+</body>
+
+</html>
